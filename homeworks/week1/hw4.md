@@ -3,7 +3,7 @@
 在沒有版本控制系統前，如果有一個常常在修改的檔案，又想保留每個版本狀態時，我們常會在編輯檔案前複製一個備份，時間久了就會變得非常不便且難以維護，有可能造成命名混亂，也很難比較各版本間的差異，尤其是在多人協作的狀況下時還可能會發生衝突。　
 
 ### 版本控制概念－用一般資料夾闡述
-如果是以資料夾去做版控會是如下
+如果是以資料夾去做版控概念會是如下－
 <table><tr><td bgcolor=AliceBlue>
   1. 需要新版本：開一個新的資料夾</br>
   2. 不想加入版控：不要加入資料夾</br> 
@@ -57,10 +57,11 @@ git 就是個幫你做版控的程式，不用像上面那樣做很多動作！
 在修改已經 commit 的檔案後，可以發現檔案變成 <font color=#FF5959>Changes not staged for commit</font> 的 <font color=#FF5959>modified</font> 狀態。  
 ![](https://imgur.com/UIEt4tF.png)
 此時可以下 `$ git add .` 並下 `$ git commit -m "msg"`。或是直接下 **`$ git commit -am "msg"`** 將兩個指令合併。 `-a` 參數表示 `--all` (git add --all)，會把 <span class="dotunderletter">已修改過</span> 的檔案加入 staged 區。  
-:::warning
+<table><tr><td bgcolor=#FDEDEC>
 請注意，使用git commit -am 不會包含新增的檔案 newfile，需要先 git add 再 git commit 個別下。
-:::
-p.s. git add 後檔案狀態會變成 <font color=green>Changes to be commited (Modified)</font>  
+</td></tr></table>
+p.s. git add 後檔案狀態會變成 <font color=green>Changes to be commited (Modified)</font> 
+
 ![](https://imgur.com/lCUEpVZ.png)
 
 #### git checkout
@@ -139,9 +140,10 @@ $ git push -u origin master
 
 ### git pull (pull remote repo at local)
 github 可以在線上編輯 code，或是共同協做的時候，其他人做過更動想要同步在本地端時，下 `$ git pull origin master`，從遠端 origin pull master branch 下來。
-:::warning
+<table><tr><td bgcolor=#FDEDEC>
 請注意，如果在遠端做更新後，本地端一定要先 git pull 將最新版同步，才能再做 git push!
-:::
+</td></tr></table>
+
 ![](https://imgur.com/lBtK1xX.png)
 如果 git pull 後發現遠端的與本地端有檔案的內容有衝突，那在 pull 結束後會顯示 conflict，改掉衝突再 commit & push 即可。
 
@@ -173,17 +175,18 @@ github 上的 `Pull Request` 用於合併分支，通常在 github 做 merge 方
 但是如果想要修改從別人 github 的 repository 下載下來的 repo 到本地然後又想 git push 到自己的 github 的話是不允許的。必須按右上角的 `Fork`，先在 github 上將這個 repo fork 到自己的 github，
 ![](https://imgur.com/15OAr1b.png)
 然後從自己的 repo git clone 下來，才可以做修改後再 push 上自己的 github。
-:::warning
+<table><tr><td bgcolor=#FDEDEC>
 請注意，用 fork 的情況是因為沒有該原 repo 的權限 (permission deny)，如果自己本身有被 repo 的作者開啟修改的權限的話，就可以直接在本地端 git push 上他的 repo
-:::
+</td></tr></table>
 
 ### 想改最後一次的 commit message 
 在本地端 git commit 後發現 commit message 打錯了，只要下 `$ git commit --amend`即可進入 vim 編輯器做修改。
 
 ![](https://imgur.com/7uZHzPo.png)
-:::warning
+<table><tr><td bgcolor=#FDEDEC>
 請注意，如果已經 commit 而且又 push to remote 了，那就乖乖認命吧，這種情形下你在 local 端改的話可能會造成其他人的困擾。最好的方法還是 push 之前先檢查一下，避免錯的東西被放到遠端。
-:::
+</td></tr></table>
+
 ### commit 後但後悔了
 使用 `$ git reset HEAD^ (--soft / --hard / --mixed)`
 

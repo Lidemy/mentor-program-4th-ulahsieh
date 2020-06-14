@@ -17,9 +17,9 @@ CLI (Command Line Interface)是指沒有操作介面、僅透過純文字對電�
 - grep : 可以抓取指定關鍵字，例如 `$ cat hello.js | grep a`，把所有包含 a 的字印出來。
 - wget : 下載檔案，例如 `$ wget <URL>`
 - curl : 送出request，可用於測試 API，例如 `$ curl <api URL>`，會回傳 reponse、`$ curl -I <URL>`，會列出 Header。
-- > : 指重新導向，`$ ls -al > result.txt`，將 ls -al 的資料保存到 result.txt。
-- >> : 可以 append 到檔案結尾，`$ echo "append to the end" >> result.txt`。
-- | : 前面的輸出為後面的輸入，例如 `$ cat hello.txt | grep h` 會印出 hello.txt 中有 h 的地方。
+- `>` : 指重新導向，`$ ls -al > result.txt`，將 ls -al 的資料保存到 result.txt。
+- `>>` : 可以 append 到檔案結尾，`$ echo "append to the end" >> result.txt`。
+- `|` : 唸做 pipe，指的是前面的輸出為後面的輸入，例如 `$ cat hello.txt | grep h` 會印出 hello.txt 中有 h 的地方。
 
 
 #### 關於 How 哥叛徒的問題

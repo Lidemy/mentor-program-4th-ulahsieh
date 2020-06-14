@@ -31,7 +31,6 @@ google server 從資料庫撈到資料後會再經由網路將 response 傳回�
 	```
 	$ ifconfig -l     # 列出所有介面卡名稱
 	$ ifconfig -a    # 列出所有啟動和停用的網路介面卡
-
 	$ ifconfig en0        # 查詢網路介面卡的狀態
 	$ ifconfig en0 up      # 啟動網路介面卡
 	$ ifconfig en0 down      # 停用網路介面卡
