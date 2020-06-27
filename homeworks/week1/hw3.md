@@ -28,5 +28,6 @@ CLI (Command Line Interface)是指沒有操作介面、僅透過純文字對電�
 
 1. 開啟 CMD  
 2. cd 到你想要去的目錄，假設是根目錄好了，`$ cd /`  
-3. 新增 wifi 資料夾，`$ mkdir wifi`  
+3. 新增 wifi 資料夾，`$ mkdir wifi`
+4. cd 到剛剛建的資料夾下，`$ cd wifi`
 4. 建一個 afu.js 的檔案，`$ touch afu.js`  
