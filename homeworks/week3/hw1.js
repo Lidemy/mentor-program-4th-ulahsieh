@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 /* eslint-disable no-shadow */
 
 const readline = require('readline');
@@ -14,9 +13,9 @@ rl.on('line', (line) => {
 });
 
 function solve(lines) {
-  for (let i = 0; i < lines; i++) {
+  for (let i = 0; i < lines; i += 1) {
     let temp = '';
-    for (let j = 0; j <= i; j++) {
+    for (let j = 0; j <= i; j += 1) {
       temp += '*';
     }
     console.log(temp);

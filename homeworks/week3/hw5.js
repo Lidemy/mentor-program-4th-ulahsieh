@@ -1,41 +1,27 @@
-/* eslint-disable no-plusplus */
-/* eslint-disable no-shadow */
-/* eslint-disable no-lonely-if */
-/* eslint-disable no-undef */
+/* eslint-disable no-shadow, no-undef */
 
 const readline = require('readline');
 
+const lines = [];
 const rl = readline.createInterface({
   input: process.stdin,
 });
-
-const lines = [];
 
 rl.on('line', (line) => {
   lines.push(line);
 });
 
 function solve(lines) {
-  for (let i = 1; i <= Number(lines[0]); i++) {
+  for (let i = 1; i <= Number(lines[0]); i += 1) {
     const arr = lines[i].split(' ');
     const A = BigInt(arr[0]);
     const B = BigInt(arr[1]);
-    if (arr[2] === '1') {
-      if (A > B) {
-        console.log('A');
-      } else if (A < B) {
-        console.log('B');
-      } else {
-        console.log('DRAW');
-      }
+    if (A === B) {
+      console.log('DRAW');
+    } else if ((arr[0] === '1' && A > B) || (arr[0] === '-1' && A < B)) {
+      console.log('A');
     } else {
-      if (A > B) {
-        console.log('B');
-      } else if (A < B) {
-        console.log('A');
-      } else {
-        console.log('DRAW');
-      }
+      console.log('B');
     }
   }
 }

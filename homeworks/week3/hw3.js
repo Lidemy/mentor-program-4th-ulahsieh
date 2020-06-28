@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 /* eslint-disable no-shadow */
 
 const readline = require('readline');
@@ -15,7 +14,7 @@ rl.on('line', (line) => {
 
 function isPrime(num) {
   if (num === 1) return false;
-  for (let i = 2; i < num; i++) {
+  for (let i = 2; i < num; i += 1) {
     if (num % i === 0) return false;
   }
   return true;
@@ -23,7 +22,7 @@ function isPrime(num) {
 
 function solve(lines) {
   const n = Number(lines[0]);
-  for (let i = 1; i <= n; i++) {
+  for (let i = 1; i <= n; i += 1) {
     console.log(isPrime(Number(lines[i])) ? 'Prime' : 'Composite');
   }
 }
