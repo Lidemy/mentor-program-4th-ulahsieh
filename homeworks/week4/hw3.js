@@ -1,9 +1,12 @@
 /* eslint-disable  import/no-unresolved */
 
 const request = require('request');
+const process = require('process');
+
+const baseURL = 'https://restcountries.eu/rest/v2/name/';
 
 request(
-  'https://restcountries.eu/rest/v2/name/tai',
+  baseURL + process.argv[2],
   (error, response, body) => {
     const json = JSON.parse(body);
     if (error !== null) {
